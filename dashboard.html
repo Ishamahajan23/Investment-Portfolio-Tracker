@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <header class="bg-black flex justify-around md:justify-evenly items-center p-6 md:w-full text-white text-l :text-xl">
+        <img src="/img/INVESTA__5_-removebg-preview.png" alt="logo" class="mr-4 w-20 md:w-50 h-5 md:h-10 ">
+        <div class="flex justify-evenly items-center">
+            <a href="/dashboard.html">Dashboard</a>
+        </div>
+        <button class="bg-white text-black py-1 md:py-2 px-5 md:px-7" type="button" onclick="Logout()">Logout</button>
+    </header>
+
+    <main class="grid-container grid  grid-cols-1 md:grid-cols-2 gap-4 p-4 h-screen m-4">
+        <div id="left-panel" class="left-panel draggable " draggable="true">
+            <h1 id="user-status" class=" text-center text-xl"></h1>
+            <div class="bg-white p-4 rounded-lg shadow-lg ">
+                <h2 class="text-2xl font-bold text-center mb-4">Live Asset Values</h2>
+                
+                <table class="w-full border-collapse border border-gray-300 text-center">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="p-2 border border-gray-300">Asset Type</th>
+                            <th class="p-2 border border-gray-300">Symbol</th>
+                            <th class="p-2 border border-gray-300">Current Value (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="asset-list">
+                        <!-- Data will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+            <section class="form bg-white p-4 rounded-lg shadow-lg flex flex-col gap-4"> 
+                <h2 class="text-2xl font-bold text-center mb-4">Add New Asset</h2>
+                <select name="" id="asset" class="w-full p-2 rounded-lg shadow-lg">
+                    <option value="">Select Asset</option>
+                    <option value="bond">Bonds</option>
+                    <option value="crypto">Crypto</option>
+                    <option value="stock">Stock</option>
+                </select>
+                <input type="text" id="asset-name" placeholder="Asset Name" class="w-full p-2 rounded-lg shadow-lg">
+                <input type="text" id="quantity" placeholder="Quantity" class="w-full p-2 rounded-lg shadow-lg">
+                <input type="number" id="purchase-price" placeholder="Purchase Price" class="w-full p-2 rounded-lg shadow-lg">
+                <input type="number" id="current-price" placeholder="Current Price" class="w-full p-2 rounded-lg shadow-lg">
+                <button onclick="addAsset()" class="px-4 py-3 bg-black text-white">Add Asset</button>
+            </section>
+
+            <section class="filters bg-white p-4 rounded-lg shadow-lg " >
+                <h2 class="text-2xl font-bold text-center mb-4">Filter Assets</h2>
+                <select id="filter-type" onchange="filterAssets()" class="w-full p-2 rounded-lg shadow-lg">
+                    <option value="all">All Assets</option>
+                    <option value="bond">Bonds</option>
+                    <option value="stock">Stocks</option>
+                    <option value="crypto">Cryptocurrency</option>
+                </select>
+            </section>
+
+            <section class="portfolio bg-white p-4 rounded-lg shadow-lg flex flex-col gap-4">
+                <h2 class="text-2xl font-bold text-center mb-4">Portfolio Overview</h2>
+                <div class="overflow-x-auto">
+                <table class=" w-50 md:w-full border-collapse">
+                    <thead class="bg-gray-200 py-5 text-left font-bold text-sm md:text-lg">
+                        <tr class="border-b-2 border-gray-300 ">
+                            <th class="p-2">Asset Type</th>
+                            <th class="p-2">Asset</th>
+                            <th class="p-2"> Qty.</th>
+                            <th class="p-2">Avg.Price.</th>
+                            <th class="p-2">CMP</th>
+                            <th class="p-2"> P/L</th>
+                            <th class="p-2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="portfolio-list" class=" py-4 text-left font-normal text-sm md:text-lg">
+                    </tbody>
+                </table>
+                </div>
+            </section>
+        </div>
+
+        <div id="right-panel" class="right-panel draggable bg-gray-200 p-4 rounded-lg shadow-lg flex flex-col gap-4" draggable="true">
+            <section class="chart-section bg-white p-4 rounded-lg shadow-lg draggable" draggable="true">
+                <h2 class="text-2xl font-bold text-center mb-4">Portfolio Distribution</h2>
+                <div>
+                    <canvas id="myChart1" width="400" height="400"></canvas>
+                </div>
+            </section>
+
+            <section class="performance-chart bg-white p-4 rounded-lg shadow-lg draggable" draggable="true">
+                <h2 class="text-2xl font-bold text-center mb-4"> Performance By Asset Quantity</h2>
+                <div>
+                    <canvas id="myChart2" width="400" height="400"></canvas>
+                </div>
+            </section>
+
+            <section class="bar-chart bg-white p-4 rounded-lg shadow-lg draggable" draggable="true">
+                <h2 class="text-2xl font-bold text-center mb-4">Profit/Loss Bar Chart</h2>
+                <div>
+                    <canvas id="myChart3" width="400" height="400"></canvas>
+                </div>
+            </section>
+
+            <!-- <section class="radar-chart bg-white p-4 rounded-lg shadow-lg draggable" draggable="true">
+                <h2 class="text-2xl font-bold text-center mb-4">Asset Distribution Radar Chart</h2>
+                <div>
+                    <canvas id="myChart4" width="400" height="400"></canvas>
+                </div>
+            </section> -->
+        </div>
+      
+    </main>
+   
+
+       
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/script.js"></script>
+    <script type="module" src="/js/firebase_config.js"></script>
+    
+</body>
+</html>

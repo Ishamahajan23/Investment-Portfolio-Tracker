@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    
+    <form action="" class="flex justify-center align-center p-4 h-full my-40 md:w-full">
+        <div class="form bg-white p-4 rounded-lg shadow-lg flex flex-col gap-4 h-1/2 w-100 md:w-200 m-auto">
+            <h2 class="text-xl">Login</h2>
+            <input type="text" id="login-email" placeholder="Email" class="w-full p-2 rounded-lg shadow-lg">
+            <input type="password" id="login-password" placeholder="Password" class="w-full p-2 rounded-lg shadow-lg">
+            <button type="button" onclick="Login()" class="px-4 py-3 bg-black text-white">Login</button>
+            <p class="text-center">Don't have an account? <a href="/signup.html">Sign Up</a></p>
+            <span class="text-l text-center text-red-500" id="message"></span>
+        </div>
+    </form>
+   
+    <script type="module" src="/js/firebase_config.js"></script>
+    
+</body>
+</html>
