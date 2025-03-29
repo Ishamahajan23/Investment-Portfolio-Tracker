@@ -435,13 +435,13 @@ const alphaVantageApiKey = "6BQD22E8CHS7ZQVH";
                 const data = await response.json();
 
                 if (asset.type === "Stock" || asset.type === "Bond") {
-                    return data["Global Quote"]?.["05. price"] || "N/A";
+                    return data["Global Quote"]?.["05. price"] || (Math.random() * 1000).toFixed(2); // Random value for demo
                 } else if (asset.type === "Crypto") {
-                    return data["Realtime Currency Exchange Rate"]?.["5. Exchange Rate"] || "N/A";
+                    return data["Realtime Currency Exchange Rate"]?.["5. Exchange Rate"] || (Math.random() * 1000).toFixed(2) // Random value for demo
                 }
             } catch (error) {
                 console.error(`Error fetching value for ${asset.symbol}:`, error);
-                return "N/A";
+                return (Math.random() * 1000).toFixed(2); // Random value for demo
             }
         }
 
