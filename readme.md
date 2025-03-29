@@ -7,21 +7,20 @@ Investment Tracker is a web application designed to help users manage and track 
 Fullstack
 
 ## Deployed App
-Frontend: [https://investment-tracker-frontend.example](https://investment-tracker-frontend.example)  
-Backend: [https://investment-tracker-backend.example](https://investment-tracker-backend.example)  
-Database: [https://investment-tracker-database.example](https://investment-tracker-database.example)
+Frontend: [https://investatracker.netlify.app/index.html] 
+Backend: [https://investment-tracker-backend.example] 
+Database: [https://investment-portfolio-tra-abb9b-default-rtdb.firebaseio.com/portfolio]
 
 ## Directory Structure
 Investment Tracker/
-├─ backend/
-├─ frontend/
-│  ├─ js/
-│  ├─ html/
-│  ├─ css/
+├─ img/
+├─ js/
 │  ├─ ...
+|....
 
 ## Video Walkthrough of the Project
 Attach a short video walkthrough showcasing all features of the application. [1 - 3 minutes]
+"https://drive.google.com/file/d/1ecje8P2A8j27hzSFM2sykmYhJnLpmzeJ/view?usp=drive_link"
 
 ## Video Walkthrough of the Codebase
 Attach a short video walkthrough explaining the codebase structure and functionality. [1 - 5 minutes]
@@ -49,12 +48,7 @@ git clone https://github.com/username/investment-tracker.git
 # Navigate to the project directory
 cd investment-tracker
 
-# Install dependencies
-npm install
 
-# Start the development server
-npm start
-```
 
 ## Usage
 1. Sign up or log in to access the dashboard.
