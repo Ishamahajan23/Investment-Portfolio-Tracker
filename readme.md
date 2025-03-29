@@ -24,6 +24,8 @@ Attach a short video walkthrough showcasing all features of the application. [1 
 
 ## Video Walkthrough of the Codebase
 Attach a short video walkthrough explaining the codebase structure and functionality. [1 - 5 minutes]
+https://drive.google.com/file/d/1F5-ImHO61MGjXg2OySQcu1mjKQK9ApCC/view?usp=drive_link
+
 
 ## Features
 - Add, view, and delete assets in the portfolio.
