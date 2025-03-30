@@ -27,6 +27,13 @@ Attach a short video walkthrough explaining the codebase structure and functiona
 https://drive.google.com/file/d/1F5-ImHO61MGjXg2OySQcu1mjKQK9ApCC/view?usp=drive_link
 
 
+## ScreenShots of the Project
+Home- [https://drive.google.com/file/d/1M98_zr3Btt1oRSLTUq4hP3MPI6Y84Rt1/view?usp=drive_link]
+sign-up -[https://drive.google.com/file/d/1htxVfttderScgHAhmeEB50q_2N3Uxmyj/view?usp=drive_link]
+login- [https://drive.google.com/file/d/1VZo9TjpaE3JXbNbLyUiExFujmrbkMO3d/view?usp=sharing]
+Dashboard-  1.[https://drive.google.com/file/d/1eSwbqSqH9SftqtNAXrYbAaHB8y6V6VHr/view?usp=drive_link]
+            2.[https://drive.google.com/file/d/1-yx17mPuw8UZFP1Uk-d8x6dw-LM1BoCk/view?usp=drive_link]
+
 ## Features
 - Add, view, and delete assets in the portfolio.
 - Filter assets by type (Stocks, Crypto, Bonds).
